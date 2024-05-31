@@ -29,7 +29,7 @@ Refer to https://github.com/Re4son/RPi-Tweaks/blob/master/pi-tail/Pi-Tail.HOWTO 
     * Rename `iface sepultura inet static` to `iface HomeWiFi inet static`
     * Change IP address from `192.168.43.254` to `192.168.123.254`
     * Change gateway IP address from `192.168.43.1` to `192.168.123.173`
-    * [optional] Remove entries for `mobile-1` and `mobile-2` interfaces. Seems they aren't affect anything.
+    * [optional] Remove entries for `mobile-1` and `mobile-2` interfaces.
 6. [optional] If you want to keep the hotspot password in secret, use the command `wpa_passphrase <SSID> <PASSWORD>`. In our case the command will be `wpa_passphrase HomeWiFi R4t4m4h4tt4`. This will generate a config. DON'T FORGET TO REMOVE PLAIN TEXT PASSWORD!
 ```
 network={
@@ -39,7 +39,7 @@ network={
 ``` 
 7. At `BOOT` partition find and edit `wpa_supplicant.conf` file:
     * Add `id_str="HomeWiFi"` string to the config and write it to the file. The larger number in `priority=` parameter, the higher the priority.
-    * [optional] Remove the other entries in the file. Seems they aren't affect anything.
+    * [optional] Remove the other entries in the file.
 8. Insert microSD card to Raspberry Pi. Plugin power cable to the Raspberry Pi. The first boot may take some time (~10 min)
 9. [optional] You can connect Raspberry Pi directly to smartphone via OTG adapter and micro-USB cable. \
 OTG adapter in smartphone, standard cable in Pi-Tail power (USB is free for dongles). More details are here: https://github.com/Re4son/RPi-Tweaks/blob/master/pi-tail/Pi-Tail.README
